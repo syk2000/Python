@@ -1,0 +1,19 @@
+for i in range(5):
+	if(i<3):
+		for j in range(5//2-i):
+			print(" ", end='')
+		for k in range(i*2+1):
+			print("*", end='')
+	else:
+		for j in range(i-5//2):
+			print(" ", end='')
+		for k in range(5-(i-5//2)*2):
+			print("*", end='')
+	print("")
+
+	
+  *
+ ***
+*****
+ ***
+  *
