@@ -28,14 +28,14 @@ class MaxLimit:
     def __init__(self, v=0): #생성자
         self.val = v
 
-    def is_hund(self, v):
+    def __is_hund(self, v):
         return self.val + v > 100
 
     def is_zero(self, v):
         return self.val - v < 0
     
     def add(self, v):
-        if(MaxLimit.is_hund(self,v)):
+        if(self.__is_hund(self,v)):
             return
         self.val += v
         
@@ -48,10 +48,10 @@ class MaxLimit:
         self.val -= v
 
 class MaxLimit_up(MaxLimit):
-    def is_hund(self, v):
+    def __is_hund(self, v):
         return self.val * v > 100   
     def mul(self, v):
-        if(self.is_hund(v)):
+        if(self.__is_hund(v)):
             return
         self.val *= v
 
